@@ -77,7 +77,8 @@
 {
     self = [super init];
     if (self) {
-        self.textView = [[UITextView alloc] initWithFrame:CGRectMake(5, 0, 310, ContentCellHeight)];
+        self.textView = [[UITextView alloc] initWithFrame:CGRectMake(5, 0, 768, ContentCellHeight)];
+        self.textView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleWidth;
         self.textView.text = self.content;
         self.textView.delegate = self;
         self.textView.scrollEnabled = NO;
